@@ -5,13 +5,13 @@ PHP test project which generate a html label
 
 Requirements
 =========================
-PHP 7.0 or higher
+PHP 7.3 or higher
 
-Composer for installation
+Composer 2 for installation
 
 Installation
 =========================
-composer require "tripsy/pctest"
+composer require "tripsy1234/pctest"
 
 Usage
 =========================
