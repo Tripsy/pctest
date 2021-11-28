@@ -1,0 +1,31 @@
+{
+    "name": "gabriel/pctest",
+    "description": "Composer package / Generate labe",
+    "keywords": ["label", "composer", "package", "test"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel",
+            "email": "no-email@test.com"
+        }
+    ],
+    "type": "project",
+    "require": {
+		"php": ">=7.3",
+        "rakit/validation": "^1.4",
+        "jenssegers/blade": "^1.4"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gabriel\\Pctest\\": ""
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gabriel\\Tests\\": "test/"
+        }
+    }
+}
