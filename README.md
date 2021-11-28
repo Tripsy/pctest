@@ -6,6 +6,7 @@ PHP test project which generate a html label
 Requirements
 =========================
 PHP 7.0 or higher
+
 Composer for installation
 
 Installation
@@ -31,4 +32,5 @@ Resources
 =========================
 
 https://github.com/jenssegers/blade
+
 https://github.com/rakit/validation
