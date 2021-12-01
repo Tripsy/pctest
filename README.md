@@ -38,6 +38,7 @@ Run phpUnit tests using following command:
 $ vendor\bin\phpunit test
 
 Sample data:
+
     ```
     $data = [
         'first_name'   => 'David',

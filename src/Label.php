@@ -49,12 +49,17 @@ class Label implements LabelInterface
     }
 
     /**
+     * @param string|null $view_path
+     *
      * @return string
      */
-    public function print(): string
+    public function print(string $view_path = null): string
     {
+		//vars
+		$view_path = $view_path ?? __DIR__.'/../view';
+
         //init templating
-        $blade = new Blade('view', 'cache');
+        $blade = new Blade($view_path, 'cache');
 
         //return
         return $blade->make('label/view', [
