@@ -16,6 +16,7 @@ composer require "tripsy1234/pctest"
 Usage
 =========================
 
+```
 require('vendor/autoload.php');
 
 use Gabriel\PcTest\Src\Label;
@@ -28,6 +29,7 @@ if ($errors = $label->getError()) {
 } else {
     echo $label->print();
 }
+```
 
 Notes
 =========================
@@ -35,7 +37,8 @@ Notes
 Run phpUnit tests using following command:
 $ vendor\bin\phpunit test
 
-Sameple data:
+Sample data:
+    ```
     $data = [
         'first_name'   => 'David',
         'last_name'    => 'Gabriel',
@@ -49,6 +52,7 @@ Sameple data:
         'phone'        => '07000111222',
         'email'        => 'engine@test.ro',
     ];
+    ```
 
 Resources
 =========================
