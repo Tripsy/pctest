@@ -16,6 +16,10 @@ composer require "tripsy1234/pctest"
 Usage
 =========================
 
+require('vendor/autoload.php');
+
+use Gabriel\PcTest\Src\Label;
+
 //generate label output
 $label = new Label($data);
 
