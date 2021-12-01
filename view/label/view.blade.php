@@ -1,15 +1,10 @@
 
-@extends('layout.general')
 
-@section('content')
+<h1>Label</h1>
 
-<h1>Label / {{ $flag_source }}</h1>
-
-Name: {{ $first_name}} {{ $last_name}} <br />
-Company Name: {{ $company_name}} <br />
-Full Address: {{ $address_1}} {{ $address_2}} <br />
-Phone number: {{ $phone}} <br />
-Email: {{ $email}} <br />
+Name: {{ $data['first_name']}} {{ $data['last_name']}} <br />
+Company Name: {{ $data['company_name']}} <br />
+Full Address: {{ $data['address_1']}} {{ $data['address_2']}} <br />
+Phone number: {{ $data['phone']}} <br />
+Email: {{ $data['email']}} <br />
 Unique identifier: {{ $ident}} <br />
-
-@endsection

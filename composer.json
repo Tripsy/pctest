@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Gabriel\\Pctest\\": ""
+            "Gabriel\\PcTest\\Src\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Gabriel\\Tests\\": "test/"
+            "Gabriel\\PcTest\\Tests\\": "test/"
         }
     }
 }

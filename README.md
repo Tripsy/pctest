@@ -16,17 +16,35 @@ composer require "tripsy1234/pctest"
 Usage
 =========================
 
-Accept a set of data sent via POST json and outputs html for a label.
+//generate label output
+$label = new Label($data);
 
-Sample data in test.http (work with REST Client VSCode extension)
-
-Output as content-Type: text/html
+if ($errors = $label->getError()) {
+    echo implode('<br />', $errors);
+} else {
+    echo $label->print();
+}
 
 Notes
 =========================
 
 Run phpUnit tests using following command:
 $ vendor\bin\phpunit test
+
+Sameple data:
+    $data = [
+        'first_name'   => 'David',
+        'last_name'    => 'Gabriel',
+        'company_name' => 'Test',
+        'address_1'    => 'Str Zorelelor',
+        'address_2'    => 'Nr 1',
+        'city'         => 'Craiova',
+        'county'       => 'Dolj',
+        'country'      => 'Romania',
+        'zip_code'     => '12345',
+        'phone'        => '07000111222',
+        'email'        => 'engine@test.ro',
+    ];
 
 Resources
 =========================

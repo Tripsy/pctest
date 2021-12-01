@@ -1,9 +1,9 @@
 <?php
 
-namespace Gabriel\Pctest\Tests;
+namespace Gabriel\PcTest\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Gabriel\Pctest\Src\Label;
+use Gabriel\PcTest\Src\Label;
 
 class LabelTest extends TestCase
 {
@@ -27,7 +27,7 @@ class LabelTest extends TestCase
     */
     public function testIsThereAnySyntaxError()
     {
-        $var = new Label;
+        $var = new Label(self::DATA_SET);
 
         $this->assertTrue(is_object($var));
     }
@@ -36,13 +36,11 @@ class LabelTest extends TestCase
      * Test all label attributes are present in data set
     *
     */
-    public function testAttributesAreSet()
+    public function testAttributes()
     {
-        $var = new Label;
+        $var = new Label(self::DATA_SET);
 
-        foreach ($var::LABEL_ATTRIBUTES as $k) {
-            $this->assertArrayHasKey($k, self::DATA_SET);
-        }
+        $this->assertEquals(self::DATA_SET, $var->getData());
     }
 
     /**
@@ -52,28 +50,10 @@ class LabelTest extends TestCase
     */
     public function testLastName()
     {
-        $var = new Label;
-
-        $var->setData(self::DATA_SET);
+        $var = new Label(self::DATA_SET);
 
         $last_name = $var->getDataValue('last_name');
 
         $this->assertEquals(self::DATA_SET['last_name'], $last_name);
-    }
-
-    /**
-     * Test getDataValue for key last_name
-    *
-    *
-    */
-    public function testLAbelAttributeNotExist()
-    {
-        $var = new Label;
-
-        $var->setData(self::DATA_SET);
-
-        $var->setDataValue('attribute43423422942', 'this_value');
-
-        $this->assertTrue(count($var->getErrors()) == 2, 'this_value doesn\'t exist in LABEL_ATTRIBUTES');
     }
 }
